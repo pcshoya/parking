@@ -11,7 +11,7 @@
 	<header>주차 관제 프로그램</header>
 	<nav>
 		<a href="in.jsp">차량입차</a>&nbsp;&nbsp;&nbsp; 
-		<a href="list.jsp">차량조회</a>&nbsp;&nbsp;&nbsp;
+		<a href="search.jsp">차량조회</a>&nbsp;&nbsp;&nbsp;
 		<a href="out.jsp">차량출차</a>&nbsp;&nbsp;&nbsp; 
 		<a href="index.jsp">홈으로</a>
 	</nav>
