@@ -10,7 +10,7 @@
 	<jsp:include page="header.jsp"></jsp:include>
 	<section>
 		<h2>차량출차</h2>
-		<form name="frm" onsubmit="checkOut()">
+		<form name="frm" onsubmit="return checkOut()">
 			<table border="1">
 				<tr>
 					<td>차량번호</td>
