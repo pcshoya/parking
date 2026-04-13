@@ -11,7 +11,7 @@
 <jsp:include page="header.jsp"></jsp:include>
 <section>
 	<h2>차량입차</h2>
-	<form name="frm" onsubmit="return check_In()" action="insert.jsp">
+	<form name="frm" onsubmit="return checkIn()" action="in_action.jsp">
 			<table border="1">
 				<tr>
 					<td>차량번호</td>

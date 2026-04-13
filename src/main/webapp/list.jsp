@@ -11,7 +11,7 @@
 <jsp:include page="header.jsp"></jsp:include>
 <section>
 <h2>차량조회</h2>
-<form name="frm" onsubmit="return checkValue()">
+<form name="frm" onsubmit="return checkValue()" action="list_result.jsp">
 <table border="1">
 	<tr>
 		<td>차량번호를 입력하시오.</td>

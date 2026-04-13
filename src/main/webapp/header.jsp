@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<header> (과정평가형 정보처리산업기사)주차 관제 프로그램</header>
+	<header>주차 관제 프로그램</header>
 	<nav>
 		<a href="in.jsp">차량입차</a>&nbsp;&nbsp;&nbsp; 
 		<a href="list.jsp">차량조회</a>&nbsp;&nbsp;&nbsp;
