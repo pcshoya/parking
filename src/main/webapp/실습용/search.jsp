@@ -14,7 +14,7 @@
 <section>
 <h2>차량조회</h2>
 
-<!-- 자바스크립트 유효성 검사 및 검증 추가 -->
+<!-- onsubmit 자바스크립트 유효성 검사 및 action 추가 -->
 <form name="frm">
 <table border="1">
 	<tr>
