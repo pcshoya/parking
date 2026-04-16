@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="dbconnect.jsp" %>	<!-- 데이터베이스 접속 -->
+<!-- 데이터베이스 접속 -->    
+<%@ include file="dbconnect.jsp" %>
+<!-- java sql 라이브러리 사용 -->
 <%@ page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
@@ -12,6 +14,7 @@
 <jsp:include page="header.jsp"></jsp:include>
 <section>
 <h2>차량조회</h2>
+<!-- car_num 파라미터 값 확인 -->
 <%
 	String carnum = request.getParameter("car_num");	/* car_num을 파라미터로 받아오기 */
 	
