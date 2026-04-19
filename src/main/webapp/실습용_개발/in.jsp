@@ -7,12 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<script src="java.js"></script>
+<!-- 외부 자바스크립트 java.js 불러오기 -->
+
 <jsp:include page="header.jsp"></jsp:include>
 <section>
 	<h2>차량입차</h2>
-	<!-- 입력 유효성 검사, action 작성 -->
-	<form name="frm" onsubmit="return checkIn()" action="in_action.jsp">
+<!-- 유효성 검사, action 전속 -->
+	<form name="frm">
 			<table border="1">
 				<tr>
 					<td>차량번호</td>

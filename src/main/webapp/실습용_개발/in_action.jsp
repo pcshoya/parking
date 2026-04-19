@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="java.sql.*" %>
+<!-- sql 라이브러리 불러오기 -->
+
 <!-- dbconnect.jsp 불러오기 -->
-<%@ include file="dbconnect.jsp" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,9 +11,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<!-- java.js 불러오기 -->
-<script src="java.js"></script>
-<!-- 파라미터 불러오기, 데이터베이스 쿼리 실행 -->
+<!-- jsp, 파라미터 불러오기, 데이터베이스 쿼리 실행 -->
 <%
 
 String carnum= request.getParameter("car_num");

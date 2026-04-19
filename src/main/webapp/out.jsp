@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
+<%@ include file="dbconnect.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,10 +9,28 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+
+/* try{
+	Statement stmt = conn.createStatement();
+	ResultSet rs = stmt.executeQuery(
+
+			
+	);
+	
+	
+	rs.close();
+	stmt.close();
+	conn.close();
+	
+}catch(Exception e){
+} */
+
+%>
 	<jsp:include page="header.jsp"></jsp:include>
 	<section>
 		<h2>차량출차</h2>
-		<form name="frm" onsubmit="return checkOut()">
+		<form name="frm" onsubmit="return checkOut()" action="out_action.jsp">
 			<table border="1">
 				<tr>
 					<td>차량번호</td>
@@ -22,11 +42,11 @@
 				</tr>
 				<tr>
 					<td>소유자이름</td>
-					<td><input type="text" disabled></td>
+					<td><input type="text"></td>
 				</tr>
 		<tr>
 			<td>출차시간</td>
-			<td><input type="text" disabled></td>
+			<td><input type="text">22:03</td>
 		</tr>
 		<tr>
 			<td colspan="2" class="td-center">
