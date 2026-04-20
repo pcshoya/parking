@@ -43,6 +43,5 @@ catch(Exception e)
 
 %>
 
-</h2>
 </body>
 </html>

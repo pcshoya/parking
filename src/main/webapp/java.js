@@ -35,10 +35,20 @@ function checkIn(){
 }
 
 function checkOut(){
-	if(document.frm.car_num.value == ""){
+	const select = document.querySelector('select[name="car_num"]');
+	if(select.selectedIndex === 0){
 			alert("차량번호가 입력되지 않았습니다.");
-			document.frm.car_num.focus();
 			return false;
 		}
+		if(document.frm.owner.value==""){
+			alert("소유자 이름이 입력되지 않았습니다.");
+			document.frm.car_num.focus();			
+			return false;
+		}
+		if(document.frm.d_time.value==""){
+			alert("출차시간이 입력되지 않았습니다.");
+			document.frm.ex_time.focus();			
+			return false;
+		}		
 		return true;		
 }
