@@ -28,7 +28,9 @@ try{
 	while(rs.next()){
 		%>
 						<option><%=rs.getString("CAR_NUMBER") %></option>
-		<% } %>
+		<% 
+		} 
+		%>
 					</select>
 					</td>
 				</tr>
@@ -49,8 +51,8 @@ try{
 			
 		</tr>
 	</table>
-		<%
-
+<!-- 	table 태그안에 아래 코드를 넣으면 경고 발생 -->
+	<%
 	rs.close();
 	stmt.close();
 	conn.close();

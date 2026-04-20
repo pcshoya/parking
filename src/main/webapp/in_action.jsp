@@ -40,8 +40,6 @@ catch(Exception e)
 {
 	out.print("DB 오류 :" + e.getMessage());
 }
-
 %>
-
 </body>
 </html>
