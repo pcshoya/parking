@@ -60,7 +60,7 @@ try{
 }catch(Exception e){
 	out.print("DB오류 : "+ e.getMessage());
 }
-%>		
+%>	
 	</form>	
 	</section>
 <jsp:include page="footer.jsp"></jsp:include>
