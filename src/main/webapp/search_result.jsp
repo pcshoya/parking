@@ -21,8 +21,8 @@
 	try {
 		Statement stmt = conn.createStatement();
 		ResultSet rs = stmt.executeQuery(
-				"SELECT * FROM TBL_CAR_202301 C "+
-				"JOIN TBL_PARKING_202301 P " +
+				"SELECT * FROM TBL_CAR C "+
+				"JOIN TBL_PARKING P " +
 				"ON C.CAR_NUMBER = P.CAR_NUMBER " +
 				"WHERE C.CAR_NUMBER='"+ carnum +"'"
 		);

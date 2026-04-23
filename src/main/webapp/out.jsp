@@ -23,7 +23,7 @@
 <%
 try{
 	Statement stmt = conn.createStatement();
-	ResultSet rs = stmt.executeQuery("select * from TBL_PARKING_202301");
+	ResultSet rs = stmt.executeQuery("select * from TBL_PARKING");
 	
 	while(rs.next()){
 		%>

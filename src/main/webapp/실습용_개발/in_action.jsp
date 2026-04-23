@@ -21,7 +21,7 @@ String in_time=request.getParameter("in_time");
 try{
 	Statement stmt = conn.createStatement();
 	int result = stmt.executeUpdate(
-		    "INSERT INTO TBL_PARKING_202301(CAR_NUMBER, LOCATION, ENTRANCE_TIME) " +
+		    "INSERT INTO TBL_PARKING(CAR_NUMBER, LOCATION, ENTRANCE_TIME) " +
 		    "VALUES('" + car_num + "', '" +area+ "', '" + in_time + "')"
 	);
 	if (result>0){

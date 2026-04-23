@@ -16,7 +16,7 @@
 	try{
 	Statement stmt = conn.createStatement();
 	stmt.executeUpdate(
-			"UPDATE TBL_PARKING_202301 "+ 
+			"UPDATE TBL_PARKING "+ 
 			"SET DEPARTURE_TIME='"+d_time+"' "+ 
 			"WHERE CAR_NUMBER='"+car_num+"'"			
 	);
