@@ -14,7 +14,7 @@
 <!-- jsp, 파라미터 불러오기, 데이터베이스 쿼리 실행 -->
 <%
 
-String carnum= request.getParameter("car_num");
+String car_num= request.getParameter("car_num");
 String area=request.getParameter("area");
 String in_time=request.getParameter("in_time");
 
@@ -22,7 +22,7 @@ try{
 	Statement stmt = conn.createStatement();
 	int result = stmt.executeUpdate(
 		    "INSERT INTO TBL_PARKING_202301(CAR_NUMBER, LOCATION, ENTRANCE_TIME) " +
-		    "VALUES('" + carnum + "', '" +area+ "', '" + in_time + "')"
+		    "VALUES('" + car_num + "', '" +area+ "', '" + in_time + "')"
 	);
 	if (result>0){
 %>
