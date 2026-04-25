@@ -64,3 +64,7 @@ address{
 .td-center{
 	text-align:center;
 }
+
+nav a{
+	text-decoration: none;
+}
