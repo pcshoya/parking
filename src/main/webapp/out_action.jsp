@@ -18,7 +18,7 @@
 	try{
 	String sql = "UPDATE TBL_PARKING SET DEPARTURE_TIME='"+d_time+"' WHERE CAR_NUMBER='"+car_num+"'"; 
 	PreparedStatement pstmt = conn.prepareStatement(sql);
-	pstmt.executeUpdate(sql);
+	pstmt.executeUpdate();
 
 	pstmt.close();
 	conn.close();

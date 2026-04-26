@@ -21,8 +21,7 @@
 	try {
 		String sql = "SELECT * FROM TBL_CAR C JOIN TBL_PARKING P ON C.CAR_NUMBER = P.CAR_NUMBER WHERE C.CAR_NUMBER='"+car_num+"'";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
-		ResultSet rs = pstmt.executeQuery(
-		);
+		ResultSet rs = pstmt.executeQuery();
 %>
 		<table border="1">
 			<tr>

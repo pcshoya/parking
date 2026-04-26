@@ -21,7 +21,7 @@ String in_time=request.getParameter("in_time");
 try{
 	String sql = "INSERT INTO TBL_PARKING(CAR_NUMBER, LOCATION, ENTRANCE_TIME) VALUES('" + car_num + "', '" +area+ "', '" + in_time + "')";
 	PreparedStatement pstmt = conn.prepareStatement(sql);
-	int result = pstmt.executeUpdate(sql);
+	int result = pstmt.executeUpdate();
 	if (result>0){
 %>
 		<script>
