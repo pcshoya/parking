@@ -16,15 +16,12 @@
 <h2>차량조회</h2>
 <!-- car_num 파라미터 값 확인 -->
 <%
-	String carnum = request.getParameter("car_num");	/* car_num을 파라미터로 받아오기 */
+	String car_num = request.getParameter("car_num");	/* car_num을 파라미터로 받아오기 */
 	
 	try {
-		Statement stmt = conn.createStatement();
-		ResultSet rs = stmt.executeQuery(
-				"SELECT * FROM TBL_CAR C "+
-				"JOIN TBL_PARKING P " +
-				"ON C.CAR_NUMBER = P.CAR_NUMBER " +
-				"WHERE C.CAR_NUMBER='"+ carnum +"'"
+		String sql = "SELECT * FROM TBL_CAR C JOIN TBL_PARKING P ON C.CAR_NUMBER = P.CAR_NUMBER WHERE C.CAR_NUMBER='"+car_num+"'";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		ResultSet rs = pstmt.executeQuery(
 		);
 %>
 		<table border="1">
@@ -50,7 +47,7 @@
 <%
 	}
 		rs.close();
-		stmt.close();
+		pstmt.close();
 		conn.close();
 
 	}catch(Exception e){

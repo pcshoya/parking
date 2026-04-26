@@ -12,7 +12,7 @@
 <jsp:include page="header.jsp"></jsp:include>
 <section>
 	<h2>차량입차</h2>
-<!-- 유효성 검사, action 전속 -->
+<!-- 유효성 검사, action 전송 -->
 	<form name="frm">
 			<table border="1">
 				<tr>

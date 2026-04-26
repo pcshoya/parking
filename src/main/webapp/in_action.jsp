@@ -14,17 +14,14 @@
 <script src="java.js"></script>
 <!-- 파라미터 불러오기, 데이터베이스 쿼리 실행 -->
 <%
-
 String car_num= request.getParameter("car_num");
 String area=request.getParameter("area");
 String in_time=request.getParameter("in_time");
 
 try{
-	Statement stmt = conn.createStatement();
-	int result = stmt.executeUpdate(
-		    "INSERT INTO TBL_PARKING(CAR_NUMBER, LOCATION, ENTRANCE_TIME) " +
-		    "VALUES('" + car_num + "', '" +area+ "', '" + in_time + "')"
-	);
+	String sql = "INSERT INTO TBL_PARKING(CAR_NUMBER, LOCATION, ENTRANCE_TIME) VALUES('" + car_num + "', '" +area+ "', '" + in_time + "')";
+	PreparedStatement pstmt = conn.prepareStatement(sql);
+	int result = pstmt.executeUpdate(sql);
 	if (result>0){
 %>
 		<script>
@@ -33,7 +30,7 @@ try{
 		</script>
 <%
 	}
-	stmt.close();
+	pstmt.close();
 	conn.close();
 }
 catch(Exception e)

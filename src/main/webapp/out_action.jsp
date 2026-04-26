@@ -12,15 +12,15 @@
 <%
 	String car_num = request.getParameter("car_num");
 	String d_time= request.getParameter("d_time");
+	
+	out.print(d_time);
 
 	try{
-	Statement stmt = conn.createStatement();
-	stmt.executeUpdate(
-			"UPDATE TBL_PARKING "+ 
-			"SET DEPARTURE_TIME='"+d_time+"' "+ 
-			"WHERE CAR_NUMBER='"+car_num+"'"			
-	);
-	stmt.close();
+	String sql = "UPDATE TBL_PARKING SET DEPARTURE_TIME='"+d_time+"' WHERE CAR_NUMBER='"+car_num+"'"; 
+	PreparedStatement pstmt = conn.prepareStatement(sql);
+	pstmt.executeUpdate(sql);
+
+	pstmt.close();
 	conn.close();
 	}catch(Exception e){
 		out.print("DB 오류 : " + e.getMessage());
