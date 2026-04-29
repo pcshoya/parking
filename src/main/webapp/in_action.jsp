@@ -19,8 +19,11 @@ String area=request.getParameter("area");
 String in_time=request.getParameter("in_time");
 
 try{
-	String sql = "INSERT INTO TBL_PARKING(CAR_NUMBER, LOCATION, ENTRANCE_TIME) VALUES('" + car_num + "', '" +area+ "', '" + in_time + "')";
+	String sql = "INSERT INTO TBL_PARKING(CAR_NUMBER, LOCATION, ENTRANCE_TIME) VALUES(?,?,?)";
 	PreparedStatement pstmt = conn.prepareStatement(sql);
+	pstmt.setString(1, car_num.trim());
+	pstmt.setString(2, area.trim());
+	pstmt.setString(3, in_time.trim());
 	int result = pstmt.executeUpdate();
 	if (result>0){
 %>

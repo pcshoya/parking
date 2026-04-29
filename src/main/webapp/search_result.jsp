@@ -19,8 +19,9 @@
 	String car_num = request.getParameter("car_num");	/* car_num을 파라미터로 받아오기 */
 	
 	try {
-		String sql = "SELECT * FROM TBL_CAR C JOIN TBL_PARKING P ON C.CAR_NUMBER = P.CAR_NUMBER WHERE C.CAR_NUMBER='"+car_num+"'";
+		String sql = "SELECT * FROM TBL_CAR C JOIN TBL_PARKING P ON C.CAR_NUMBER = P.CAR_NUMBER WHERE TRIM(C.CAR_NUMBER)=?";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, car_num);
 		ResultSet rs = pstmt.executeQuery();
 %>
 		<table border="1">

@@ -12,12 +12,12 @@
 <%
 	String car_num = request.getParameter("car_num");
 	String d_time= request.getParameter("d_time");
-	
-	out.print(d_time);
 
 	try{
-	String sql = "UPDATE TBL_PARKING SET DEPARTURE_TIME='"+d_time+"' WHERE CAR_NUMBER='"+car_num+"'"; 
+	String sql = "UPDATE TBL_PARKING SET DEPARTURE_TIME=? WHERE TRIM(CAR_NUMBER)=?";
 	PreparedStatement pstmt = conn.prepareStatement(sql);
+	pstmt.setString(1,d_time);
+	pstmt.setString(2,car_num);
 	pstmt.executeUpdate();
 
 	pstmt.close();
