@@ -8,7 +8,6 @@
 </head>
 <body>
 <!-- 자바스크립트 파일 연결 -->
-<script src="java.js"></script>
 
 <jsp:include page="header.jsp"></jsp:include>
 <section>

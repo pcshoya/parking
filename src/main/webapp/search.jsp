@@ -15,7 +15,7 @@
 <h2>차량조회</h2>
 
 <!-- onsubmit 자바스크립트 유효성 검사 및 action 추가 -->
-<form name="frm" onsubmit="return checkValue()" action="search_result.jsp">
+<form name="frm" onsubmit="return checkValue()" action="search_action.jsp">
 <table border="1">
 	<tr>
 		<td>차량번호를 입력하시오.</td>
