@@ -26,12 +26,7 @@ try{
 	pstmt.setString(3, in_time.trim());
 	int result = pstmt.executeUpdate();
 	if (result>0){
-%>
-		<script>
-			alert("입력완료");
-			location.href="index.jsp";
-		</script>
-<%
+		response.sendRedirect("index.jsp");	
 	}
 	pstmt.close();
 	conn.close();

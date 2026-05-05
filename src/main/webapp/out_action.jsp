@@ -18,17 +18,15 @@
 	PreparedStatement pstmt = conn.prepareStatement(sql);
 	pstmt.setString(1,d_time);
 	pstmt.setString(2,car_num);
-	pstmt.executeUpdate();
-
+	int result=pstmt.executeUpdate();
+	if(result>0){
+		response.sendRedirect("index.jsp");
+	}
 	pstmt.close();
 	conn.close();
 	}catch(Exception e){
 		out.print("DB 오류 : " + e.getMessage());
 	}
 %>
-	<script>
-		alert("출차등록이 완료됐습니다.")
-		location.href="index.jsp"
-	</script>
 </body>
 </html>
