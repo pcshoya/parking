@@ -22,8 +22,9 @@
 						<option disabled selected>차량번호</option>
 <%
 try{
-	Statement stmt = conn.createStatement();
-	ResultSet rs = stmt.executeQuery("select * from TBL_PARKING");
+	String sql = "select * from TBL_PARKING";
+	PreparedStatement pstmt = conn.prepareStatement(sql);
+	ResultSet rs = pstmt.executeQuery();
 	
 	while(rs.next()){
 		%>
@@ -54,7 +55,7 @@ try{
 <!-- 	table 태그안에 아래 코드를 넣으면 경고 발생 -->
 	<%
 	rs.close();
-	stmt.close();
+	pstmt.close();
 	conn.close();
 	
 }catch(Exception e){
