@@ -22,19 +22,7 @@
 					<td>차량번호</td>
 					<td>
 					<select name="car_num">
-<!-- 차량번호 선택불가 옵션 추가 -->
 						<option>차량번호</option>
-<%
-try{
-	Statement stmt = conn.createStatement();
-	ResultSet rs = stmt.executeQuery("select * from TBL_PARKING");
-	
-	while(rs.next()){
-		%>
-						<option><%=rs.getString("CAR_NUMBER") %></option>
-		<% 
-		} 
-		%>
 					</select>
 					</td>
 				</tr>
@@ -55,16 +43,6 @@ try{
 			
 		</tr>
 	</table>
-<!-- 	table 태그안에 아래 코드를 넣으면 경고 발생 -->
-	<%
-	rs.close();
-	stmt.close();
-	conn.close();
-	
-}catch(Exception e){
-	out.print("DB오류 : "+ e.getMessage());
-}
-%>	
 	</form>	
 	</section>
 <jsp:include page="footer.jsp"></jsp:include>
