@@ -22,7 +22,7 @@
 						<option disabled selected>차량번호</option>
 <%
 try{
-	String sql = "select * from TBL_PARKING";
+	String sql = "SELECT * FROM TBL_PARKING";
 	PreparedStatement pstmt = conn.prepareStatement(sql);
 	ResultSet rs = pstmt.executeQuery();
 	
@@ -52,7 +52,6 @@ try{
 			
 		</tr>
 	</table>
-<!-- 	table 태그안에 아래 코드를 넣으면 경고 발생 -->
 	<%
 	rs.close();
 	pstmt.close();
