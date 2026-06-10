@@ -22,7 +22,7 @@
 						<option disabled selected>차량번호</option>
 <%
 try{
-	String sql = "select * from TBL_PARKING";
+	String sql = "SELECT * FROM TBL_PARKING";
 	PreparedStatement pstmt = conn.prepareStatement(sql);
 	ResultSet rs = pstmt.executeQuery();
 	
