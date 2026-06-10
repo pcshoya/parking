@@ -52,7 +52,6 @@ try{
 			
 		</tr>
 	</table>
-<!-- 	table 태그안에 아래 코드를 넣으면 경고 발생 -->
 	<%
 	rs.close();
 	pstmt.close();

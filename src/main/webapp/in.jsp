@@ -11,7 +11,6 @@
 <jsp:include page="header.jsp"></jsp:include>
 <section>
 	<h2>차량입차</h2>
-	<!-- 입력 유효성 검사, action 작성 -->
 	<form name="frm" onsubmit="return checkIn()" action="in_action.jsp">
 			<table border="1">
 				<tr>
